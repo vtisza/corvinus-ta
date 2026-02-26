@@ -47,7 +47,7 @@ export function HeatmapGrid({ items, title }: HeatmapGridProps) {
           </div>
         ))}
       </div>
-      <div className="flex items-center gap-4 mt-3">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3">
         {[
           { label: "Strong (80%+)", color: "bg-green-500" },
           { label: "Developing (60-79%)", color: "bg-yellow-400" },

@@ -76,7 +76,7 @@ export function ChatLayout({ courseId }: ChatLayoutProps) {
   }
 
   return (
-    <div className="flex gap-0 h-[calc(100vh-10rem)] rounded-xl border overflow-hidden bg-background">
+    <div className="flex gap-0 h-[calc(100vh-14rem)] md:h-[calc(100vh-10rem)] rounded-xl border overflow-hidden bg-background">
       {/* Left: Thread list — hidden on mobile, visible sm+ */}
       <div className="w-52 flex-shrink-0 border-r flex-col bg-muted/20 hidden sm:flex">
         <ThreadList threads={threads} activeThreadId={activeThreadId} onSelect={handleThreadSelect} />

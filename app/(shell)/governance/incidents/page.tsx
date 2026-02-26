@@ -52,7 +52,7 @@ export default function IncidentsPage() {
       />
 
       {viewMode === "kanban" ? (
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {statusColumns.map(status => {
             const incidents = mockIncidents.filter(i => i.status === status)
             return (
@@ -95,7 +95,7 @@ export default function IncidentsPage() {
         </div>
       ) : (
         <Card>
-          <CardContent className="p-0">
+          <CardContent className="p-0 overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b">

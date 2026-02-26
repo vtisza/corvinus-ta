@@ -159,7 +159,7 @@ export default function CourseSpacePage({ params }: PageProps) {
         </TabsContent>
 
         {/* Assistant */}
-        <TabsContent value="assistant" className="h-[calc(100vh-16rem)]">
+        <TabsContent value="assistant">
           <ChatLayout courseId={id} />
         </TabsContent>
 

@@ -35,7 +35,7 @@ export default function QnAHubPage() {
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input placeholder="Search questions..." className="pl-8" value={search} onChange={e => setSearch(e.target.value)} />
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {["all", "open", "answered", "trending"].map(f => (
             <Button key={f} size="sm" variant={filter === f ? "default" : "outline"} className="text-xs h-8 capitalize" onClick={() => setFilter(f)}>
               {f === "all" ? `All (${mockQnaPosts.length})` : f}

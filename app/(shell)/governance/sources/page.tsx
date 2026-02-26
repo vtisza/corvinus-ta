@@ -116,10 +116,10 @@ export default function SourcesPage() {
             { label: "Audit log retention", value: "365" },
             { label: "Uploaded documents", value: "semester" },
           ].map(setting => (
-            <div key={setting.label} className="flex items-center gap-4">
-              <Label className="text-sm flex-1">{setting.label}</Label>
+            <div key={setting.label} className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <Label className="text-sm sm:flex-1">{setting.label}</Label>
               <Select defaultValue={setting.value}>
-                <SelectTrigger className="w-40 text-xs h-8"><SelectValue /></SelectTrigger>
+                <SelectTrigger className="w-full sm:w-40 text-xs h-8"><SelectValue /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="30">30 days</SelectItem>
                   <SelectItem value="90">90 days</SelectItem>
