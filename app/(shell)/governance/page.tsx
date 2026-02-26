@@ -98,7 +98,7 @@ export default function GovernanceDashboardPage() {
       {/* Top courses by adoption */}
       <Card>
         <CardHeader className="pb-2"><CardTitle className="text-sm">Top Courses by Adoption</CardTitle></CardHeader>
-        <CardContent className="p-0">
+        <CardContent className="p-0 overflow-x-auto">
           <Table>
             <TableHeader>
               <TableRow>

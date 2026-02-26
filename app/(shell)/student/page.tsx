@@ -175,10 +175,10 @@ export default function StudentHomePage() {
           <div className="space-y-2">
             {studyPlan.map((item, idx) => (
               <div key={idx} className="flex items-center gap-3">
-                <div className={`w-8 text-center text-xs font-medium ${item.done ? "text-muted-foreground" : "text-foreground"}`}>{item.day}</div>
-                <div className={`flex-1 flex items-center gap-2 ${item.done ? "line-through text-muted-foreground" : ""}`}>
-                  <p className="text-sm truncate">{item.task}</p>
-                  <Badge variant="outline" className="text-[10px] flex-shrink-0">{item.course}</Badge>
+                <div className={`w-8 text-center text-xs font-medium flex-shrink-0 ${item.done ? "text-muted-foreground" : "text-foreground"}`}>{item.day}</div>
+                <div className="flex-1 min-w-0">
+                  <p className={`text-sm truncate ${item.done ? "line-through text-muted-foreground" : ""}`}>{item.task}</p>
+                  <p className="text-[10px] text-muted-foreground truncate">{item.course}</p>
                 </div>
                 {item.done && <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />}
               </div>

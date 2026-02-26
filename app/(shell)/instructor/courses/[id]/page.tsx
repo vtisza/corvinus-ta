@@ -100,7 +100,7 @@ export default function InstructorCourseCenter({ params }: PageProps) {
                 </Button>
               </div>
             </CardHeader>
-            <CardContent className="p-0">
+            <CardContent className="p-0 overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow>
@@ -354,10 +354,10 @@ export default function InstructorCourseCenter({ params }: PageProps) {
         {/* Analytics */}
         <TabsContent value="analytics" className="space-y-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <Card><CardContent className="p-4"><p className="text-xs text-muted-foreground">Total Interactions</p><p className="text-2xl font-bold">3,241</p></CardContent></Card>
-            <Card><CardContent className="p-4"><p className="text-xs text-muted-foreground">Avg Messages/Student</p><p className="text-2xl font-bold">42.3</p></CardContent></Card>
-            <Card><CardContent className="p-4"><p className="text-xs text-muted-foreground">Unanswered Questions</p><p className="text-2xl font-bold">7</p></CardContent></Card>
-            <Card><CardContent className="p-4"><p className="text-xs text-muted-foreground">Content Gaps Found</p><p className="text-2xl font-bold">3</p></CardContent></Card>
+            <Card><CardContent className="p-3 sm:p-4"><p className="text-xs text-muted-foreground">Total Interactions</p><p className="text-xl sm:text-2xl font-bold">3,241</p></CardContent></Card>
+            <Card><CardContent className="p-3 sm:p-4"><p className="text-xs text-muted-foreground">Avg Messages/Student</p><p className="text-xl sm:text-2xl font-bold">42.3</p></CardContent></Card>
+            <Card><CardContent className="p-3 sm:p-4"><p className="text-xs text-muted-foreground">Unanswered Questions</p><p className="text-xl sm:text-2xl font-bold">7</p></CardContent></Card>
+            <Card><CardContent className="p-3 sm:p-4"><p className="text-xs text-muted-foreground">Content Gaps Found</p><p className="text-xl sm:text-2xl font-bold">3</p></CardContent></Card>
           </div>
           <Card>
             <CardHeader className="pb-2"><CardTitle className="text-sm">Confusion Topics</CardTitle></CardHeader>

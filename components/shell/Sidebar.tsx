@@ -45,13 +45,17 @@ const roleColors = {
   governance: "text-purple-400",
 }
 
-export function Sidebar() {
+interface SidebarContentProps {
+  onNavClick?: () => void
+}
+
+export function SidebarContent({ onNavClick }: SidebarContentProps) {
   const { role } = useRole()
   const pathname = usePathname()
   const items = navItems[role] || []
 
   return (
-    <aside className="hidden md:flex w-56 flex-col bg-[hsl(var(--sidebar-background))] border-r border-[hsl(var(--sidebar-border))] flex-shrink-0">
+    <>
       {/* Role label */}
       <div className="px-4 pt-4 pb-2">
         <p className={cn("text-[10px] font-semibold uppercase tracking-widest", roleColors[role])}>
@@ -60,7 +64,7 @@ export function Sidebar() {
       </div>
 
       {/* Nav items */}
-      <nav className="flex-1 px-2 py-2 space-y-0.5">
+      <nav className="flex-1 px-2 py-2 space-y-0.5 overflow-y-auto">
         {items.map((item) => {
           const Icon = iconMap[item.icon] || Home
           const isActive = pathname === item.href ||
@@ -70,6 +74,7 @@ export function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={onNavClick}
               className={cn(
                 "flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors group",
                 isActive
@@ -98,6 +103,14 @@ export function Sidebar() {
           AI Teaching Assistant v1.0
         </p>
       </div>
+    </>
+  )
+}
+
+export function Sidebar() {
+  return (
+    <aside className="hidden md:flex w-56 flex-col bg-[hsl(var(--sidebar-background))] border-r border-[hsl(var(--sidebar-border))] flex-shrink-0">
+      <SidebarContent />
     </aside>
   )
 }

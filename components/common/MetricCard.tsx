@@ -18,11 +18,11 @@ export function MetricCard({ title, value, change, changeType = "neutral", descr
 
   return (
     <Card className={cn("", className)}>
-      <CardContent className="p-5">
+      <CardContent className="p-3 sm:p-5">
         <div className="flex items-start justify-between">
           <div className="space-y-1">
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">{title}</p>
-            <p className="text-2xl font-bold tracking-tight">{value}</p>
+            <p className="text-xl sm:text-2xl font-bold tracking-tight">{value}</p>
             {change && (
               <div className={cn(
                 "flex items-center gap-1 text-xs",

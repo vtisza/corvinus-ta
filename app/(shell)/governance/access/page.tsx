@@ -42,7 +42,7 @@ export default function AccessConsentPage() {
       {/* Role-permission matrix */}
       <Card>
         <CardHeader className="pb-2"><CardTitle className="text-sm">Role-Permission Matrix</CardTitle></CardHeader>
-        <CardContent className="p-0">
+        <CardContent className="p-0 overflow-x-auto">
           <Table>
             <TableHeader>
               <TableRow>
