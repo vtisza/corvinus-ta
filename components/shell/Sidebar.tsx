@@ -76,10 +76,10 @@ export function SidebarContent({ onNavClick }: SidebarContentProps) {
               href={item.href}
               onClick={onNavClick}
               className={cn(
-                "flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors group",
+                "flex items-center gap-3 rounded-md pr-3 py-2 text-sm transition-colors group",
                 isActive
-                  ? "bg-[hsl(var(--sidebar-accent))] text-[hsl(var(--sidebar-primary))] font-medium"
-                  : "text-[hsl(var(--sidebar-foreground))] hover:bg-[hsl(var(--sidebar-accent))] hover:text-[hsl(var(--sidebar-primary))]"
+                  ? "bg-[hsl(var(--sidebar-accent))] text-[hsl(var(--sidebar-primary))] font-medium border-l-2 border-[hsl(var(--sidebar-primary))] pl-[10px]"
+                  : "pl-3 text-[hsl(var(--sidebar-foreground))] hover:bg-[hsl(var(--sidebar-accent))] hover:text-[hsl(var(--sidebar-primary))]"
               )}
             >
               <Icon className={cn("h-4 w-4 flex-shrink-0", isActive ? "text-[hsl(var(--sidebar-primary))]" : "text-[hsl(var(--sidebar-foreground))] opacity-70 group-hover:opacity-100")} />

@@ -32,7 +32,7 @@ export function Topbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 flex h-14 items-center gap-2 border-b bg-white px-3 shadow-sm">
+      <header className="sticky top-0 z-50 flex h-14 items-center gap-2 bg-white px-3 shadow-sm [border-bottom:2px_solid_hsl(43,77%,48%)]">
         {/* Mobile hamburger */}
         <Button
           variant="ghost"
