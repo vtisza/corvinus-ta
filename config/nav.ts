@@ -16,6 +16,7 @@ export const navItems: Record<Role, NavItem[]> = {
     { label: "Office Hours", href: "/student/office-hours", icon: "Calendar" },
     { label: "My Progress", href: "/student/progress", icon: "BarChart2" },
     { label: "Settings & Privacy", href: "/student/settings", icon: "Settings" },
+    { label: "A2UI Demo", href: "/student/a2ui-demo", icon: "LayoutTemplate" },
   ],
   instructor: [
     { label: "Home", href: "/instructor", icon: "Home" },
